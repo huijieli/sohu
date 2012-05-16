@@ -36,7 +36,7 @@ public class NormalMsgSceServiceAdapter extends BaseAdapter implements NormalMsg
 			String errorMsg = "The parameter 'informMsgList' is NULL!";
 			throw new RequestSceServerError(1, errorMsg);
 		}
-		if (informMsgList.size() == 0) {
+		if (informMsgList.isEmpty()) {
 			String errorMsg = "The parameter 'informMsgList' is EMPTY!";
 			throw new RequestSceServerError(1, errorMsg);
 		}
@@ -75,7 +75,7 @@ public class NormalMsgSceServiceAdapter extends BaseAdapter implements NormalMsg
 			String errorMsg = "The parameter 'requestMsgList' is NULL!";
 			throw new RequestSceServerError(1, errorMsg);
 		}
-		if (requestMsgList.size() == 0) {
+		if (requestMsgList.isEmpty()) {
 			String errorMsg = "The parameter 'requestMsgList' is EMPTY!";
 			throw new RequestSceServerError(1, errorMsg);
 		}
