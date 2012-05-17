@@ -10,8 +10,10 @@ import org.junit.Test;
 
 import sce.proto.request.Request.InformMsg;
 import sce.proto.request.Request.RequestMsg;
+import sce.proto.request.Request.SystemMsg;
 import sce.slice.request.MsgTypeEnum;
 import sce.slice.request.PagedPbSystemMsgList;
+import sce.slice.request.RequestSceServerError;
 
 public class RequestSceServiceFactoryTest {
 	
@@ -72,7 +74,7 @@ public class RequestSceServiceFactoryTest {
 					.build();
 			id = service.createRequest(requestMsg);
 			assertTrue(id > 0);
-			 done = service.deleteRequest(id, receiver, requestType);
+			done = service.deleteRequest(id, receiver, requestType);
 			assertTrue(done);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -82,12 +84,40 @@ public class RequestSceServiceFactoryTest {
 
 	@Test
 	public void testGetSystemMsgSceService() {
+		SystemMsgSceService service = null;
+		long id = -1;
+		MsgTypeEnum systemMessageType = null;
 		try {
-			SystemMsgSceService service = RequestSceServiceFactory.getSystemMsgSceService();
+			service = RequestSceServiceFactory.getSystemMsgSceService();
 			assertNotNull(service);
-			MsgTypeEnum systemMessageType = MsgTypeEnum.T9901;
+			systemMessageType = MsgTypeEnum.T9901;
+			long currentTimeMillis = System.currentTimeMillis();
+			SystemMsg systemMsg = 
+					SystemMsg.newBuilder()
+					.setType(systemMessageType.toString())
+					.setTitle("SCE²âÊÔ-±êÌâ")
+					.setContent("SCE²âÊÔ-ÄÚÈÝ")
+					.setUrl("http://www.sohu.com")
+					.setRepetition(0)
+					.setStartTime(currentTimeMillis)
+					.setEndTime(currentTimeMillis)
+					.setCreationTime(currentTimeMillis)
+					.setLastUpdateTime(currentTimeMillis)
+					.build();
+			id = service.createOne(systemMsg);
+			assertTrue(id > 0);
+			SystemMsg updatedSystemMsg = 
+					SystemMsg.newBuilder()
+					.mergeFrom(systemMsg)
+					.setUrl("http://i.sohu.com")
+					.setId(id)
+					.build();
+			boolean done = service.update(updatedSystemMsg);
+			assertTrue(done);
+			SystemMsg storedSystemMsg = service.getOne(id, systemMessageType);
+			assertEquals(updatedSystemMsg, storedSystemMsg);
 			int start = 0;
-			int count = 5;
+			int count = 100;
 			PagedPbSystemMsgList systemMsgList = service.getList(systemMessageType, start, count);
 			assertNotNull(systemMsgList);
 			assertEquals(start, systemMsgList.start);
@@ -95,9 +125,22 @@ public class RequestSceServiceFactoryTest {
 			assertTrue(systemMsgList.total >= 0);
 			assertNotNull(systemMsgList.systemMsgList);
 			assertTrue(systemMsgList.systemMsgList.size() >= 0);
+			assertTrue(systemMsgList.systemMsgList.contains(updatedSystemMsg));
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			fail(e.getMessage());
+		} finally {
+			if (service != null) {
+				boolean done;
+				try {
+					done = service.delete(id, systemMessageType);
+					assertTrue(done);
+				} catch (RequestSceServerError e) {
+					e.printStackTrace();
+					fail(e.getMessage());
+				}
+			}
 		}
 	}
 
