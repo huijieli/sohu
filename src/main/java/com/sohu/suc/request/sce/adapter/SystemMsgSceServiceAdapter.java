@@ -7,8 +7,6 @@ import sce.slice.request.RequestSceServerError;
 import sce.slice.request.SystemMsgServicePrx;
 import sce.slice.request.SystemMsgServicePrxHelper;
 
-import Ice.Current;
-
 import com.sohu.suc.request.sce.service.SystemMsgSceService;
 import com.sohu.suc.sce.core.BaseAdapter;
 
@@ -74,7 +72,7 @@ public class SystemMsgSceServiceAdapter extends BaseAdapter implements SystemMsg
 	}
 
 	@Override
-	public boolean update(SystemMsg systemMsg, Current __current) throws RequestSceServerError {
+	public boolean update(SystemMsg systemMsg) throws RequestSceServerError {
 		if (systemMsg == null) {
 			String errorMsg = "The parameter 'systemMsg' is NULL!";
 			throw new RequestSceServerError(1, errorMsg);

@@ -1,6 +1,5 @@
 package com.sohu.suc.request.sce.service;
 
-import Ice.Current;
 import sce.proto.request.Request.SystemMsg;
 import sce.slice.request.MsgTypeEnum;
 import sce.slice.request.PagedPbSystemMsgList;
@@ -57,6 +56,6 @@ public interface SystemMsgSceService {
 	 * @return 是否成功
 	 * @throws RequestSceServerError 出错时抛出此异常
 	 */
-	boolean update(SystemMsg systemMsg, Current __current) throws RequestSceServerError;
+	boolean update(SystemMsg systemMsg) throws RequestSceServerError;
 
 }
