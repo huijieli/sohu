@@ -13,15 +13,15 @@ import sce.proto.request.Request.RequestMsg;
 import sce.proto.request.Request.SystemMsg;
 import sce.slice.request.MsgTypeEnum;
 import sce.slice.request.PagedPbSystemMsgList;
-import sce.slice.request.RequestSceServerError;
+import sce.slice.request.RequestSceServerException;
 
 public class RequestSceServiceFactoryTest {
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		// 用于本地测试的设置 - begin
-//		System.setProperty("$suc$sce$RequestSceNormalMsgService", "RequestSceNormalMsgService:tcp -h localhost -p 12201");
-//		System.setProperty("$suc$sce$RequestSceSystemMsgService", "RequestSceSystemMsgService:tcp -h localhost  -p 12202");
+		System.setProperty("$suc$sce$RequestSceNormalMsgService", "RequestSceNormalMsgService:tcp -h localhost -p 12201");
+		System.setProperty("$suc$sce$RequestSceSystemMsgService", "RequestSceSystemMsgService:tcp -h localhost  -p 12202");
 		// 用于本地测试的设置 - end
 	}
 
@@ -48,7 +48,7 @@ public class RequestSceServiceFactoryTest {
 					InformMsg.newBuilder()
 					.setAppCode("test")
 					.setType(informType.toString())
-					.setTemplateId((byte) 0)
+					.setTemplateId(0)
 					.setSender("freej@sogou.com")
 					.setReceiver(receiver)
 					.setTitle("")
@@ -59,12 +59,12 @@ public class RequestSceServiceFactoryTest {
 			long id = service.createInform(informMsg);
 			assertTrue(id > 0);
 			boolean done = service.deleteInform(id, receiver,informType);
-			MsgTypeEnum requestType = MsgTypeEnum.T0202;
+			MsgTypeEnum requestType = MsgTypeEnum.T0203;
 			RequestMsg requestMsg = 
 					RequestMsg.newBuilder()
 					.setAppCode("test")
 					.setType(requestType.toString())
-					.setTemplateId((byte) 0)
+					.setTemplateId(0)
 					.setSender("freej@sogou.com")
 					.setReceiver(receiver)
 					.setTitle("")
@@ -136,7 +136,7 @@ public class RequestSceServiceFactoryTest {
 				try {
 					done = service.delete(id, systemMessageType);
 					assertTrue(done);
-				} catch (RequestSceServerError e) {
+				} catch (RequestSceServerException e) {
 					e.printStackTrace();
 					fail(e.getMessage());
 				}

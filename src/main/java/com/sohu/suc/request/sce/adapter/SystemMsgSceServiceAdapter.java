@@ -3,7 +3,7 @@ package com.sohu.suc.request.sce.adapter;
 import sce.proto.request.Request.SystemMsg;
 import sce.slice.request.MsgTypeEnum;
 import sce.slice.request.PagedPbSystemMsgList;
-import sce.slice.request.RequestSceServerError;
+import sce.slice.request.RequestSceServerException;
 import sce.slice.request.SystemMsgServicePrx;
 import sce.slice.request.SystemMsgServicePrxHelper;
 
@@ -20,62 +20,62 @@ import com.sohu.suc.sce.core.BaseAdapter;
 public class SystemMsgSceServiceAdapter extends BaseAdapter implements SystemMsgSceService {
 
 	@Override
-	public long createOne(SystemMsg systemMsg) throws RequestSceServerError {
+	public long createOne(SystemMsg systemMsg) throws RequestSceServerException {
 		if (systemMsg == null) {
 			String errorMsg = "The parameter 'systemMsg' is NULL!";
-			throw new RequestSceServerError(1, errorMsg);
+			throw new RequestSceServerException(1, new Throwable(errorMsg));
 		}
 		return getService().createOne(systemMsg);
 	}
 
 	@Override
-	public boolean delete(long id, MsgTypeEnum msgType) throws RequestSceServerError {
+	public boolean delete(long id, MsgTypeEnum msgType) throws RequestSceServerException {
 		if (id <= 0) {
 			String errorMsg = "The parameter 'id' (" + id + ") is NOT positive number!";
-			throw new RequestSceServerError(1, errorMsg);
+			throw new RequestSceServerException(1, new Throwable(errorMsg));
 		}
 		if (msgType == null) {
 			String errorMsg = "The parameter 'msgType' is NULL!";
-			throw new RequestSceServerError(1, errorMsg);
+			throw new RequestSceServerException(1, new Throwable(errorMsg));
 		}
 		return getService().delete(id, msgType);
 	}
 
 	@Override
-	public PagedPbSystemMsgList getList(MsgTypeEnum msgType, int start, int count) throws RequestSceServerError {
+	public PagedPbSystemMsgList getList(MsgTypeEnum msgType, int start, int count) throws RequestSceServerException {
 		if (msgType == null) {
 			String errorMsg = "The parameter 'msgType' is NULL!";
-			throw new RequestSceServerError(1, errorMsg);
+			throw new RequestSceServerException(1, new Throwable(errorMsg));
 		}
 		if (start < 0) {
 			String errorMsg = "The parameter 'start' (" + start + ")  is NEGATIVE integer!";
-			throw new RequestSceServerError(1, errorMsg);
+			throw new RequestSceServerException(1, new Throwable(errorMsg));
 		}
 		if (count <= 0) {
 			String errorMsg =  "The parameter 'count' (" + count + ") is NOT positive integer!";
-			throw new RequestSceServerError(1, errorMsg);
+			throw new RequestSceServerException(1, new Throwable(errorMsg));
 		}
 		return getService().getList(msgType, start, count);
 	}
 
 	@Override
-	public SystemMsg getOne(long id, MsgTypeEnum msgType) throws RequestSceServerError {
+	public SystemMsg getOne(long id, MsgTypeEnum msgType) throws RequestSceServerException {
 		if (msgType == null) {
 			String errorMsg = "The parameter 'msgType' is NULL!";
-			throw new RequestSceServerError(1, errorMsg);
+			throw new RequestSceServerException(1, new Throwable(errorMsg));
 		}
 		if (id <= 0) {
 			String errorMsg = "The parameter 'id ''" + id + "' is NOT positive integer!";
-			throw new RequestSceServerError(1, errorMsg);
+			throw new RequestSceServerException(1, new Throwable(errorMsg));
 		}
 		return getService().getOne(id, msgType);
 	}
 
 	@Override
-	public boolean update(SystemMsg systemMsg) throws RequestSceServerError {
+	public boolean update(SystemMsg systemMsg) throws RequestSceServerException {
 		if (systemMsg == null) {
 			String errorMsg = "The parameter 'systemMsg' is NULL!";
-			throw new RequestSceServerError(1, errorMsg);
+			throw new RequestSceServerException(1, new Throwable(errorMsg));
 		}
 		return getService().update(systemMsg);
 	}
