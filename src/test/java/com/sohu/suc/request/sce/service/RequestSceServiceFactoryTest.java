@@ -20,8 +20,8 @@ public class RequestSceServiceFactoryTest {
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		// 用于本地测试的设置 - begin
-		System.setProperty("$suc$sce$RequestSceNormalMsgService", "RequestSceNormalMsgService:tcp -h localhost -p 12201");
-		System.setProperty("$suc$sce$RequestSceSystemMsgService", "RequestSceSystemMsgService:tcp -h localhost  -p 12202");
+//		System.setProperty("$suc$sce$RequestSceNormalMsgService", "RequestSceNormalMsgService:tcp -h localhost -p 12201");
+//		System.setProperty("$suc$sce$RequestSceSystemMsgService", "RequestSceSystemMsgService:tcp -h localhost  -p 12202");
 		// 用于本地测试的设置 - end
 	}
 
@@ -59,7 +59,7 @@ public class RequestSceServiceFactoryTest {
 			long id = service.createInform(informMsg);
 			assertTrue(id > 0);
 			boolean done = service.deleteInform(id, receiver,informType);
-			MsgTypeEnum requestType = MsgTypeEnum.T0203;
+			MsgTypeEnum requestType = MsgTypeEnum.T0202;
 			RequestMsg requestMsg = 
 					RequestMsg.newBuilder()
 					.setAppCode("test")
