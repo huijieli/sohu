@@ -23,7 +23,7 @@ public class SystemMsgSceServiceAdapter extends BaseAdapter implements SystemMsg
 	public long createOne(SystemMsg systemMsg) throws RequestSceServerException {
 		if (systemMsg == null) {
 			String errorMsg = "The parameter 'systemMsg' is NULL!";
-			throw new RequestSceServerException(1, new Throwable(errorMsg));
+			throw new RequestSceServerException(1, errorMsg);
 		}
 		return getService().createOne(systemMsg);
 	}
@@ -32,11 +32,11 @@ public class SystemMsgSceServiceAdapter extends BaseAdapter implements SystemMsg
 	public boolean delete(long id, MsgTypeEnum msgType) throws RequestSceServerException {
 		if (id <= 0) {
 			String errorMsg = "The parameter 'id' (" + id + ") is NOT positive number!";
-			throw new RequestSceServerException(1, new Throwable(errorMsg));
+			throw new RequestSceServerException(1, errorMsg);
 		}
 		if (msgType == null) {
 			String errorMsg = "The parameter 'msgType' is NULL!";
-			throw new RequestSceServerException(1, new Throwable(errorMsg));
+			throw new RequestSceServerException(1, errorMsg);
 		}
 		return getService().delete(id, msgType);
 	}
@@ -45,15 +45,15 @@ public class SystemMsgSceServiceAdapter extends BaseAdapter implements SystemMsg
 	public PagedPbSystemMsgList getList(MsgTypeEnum msgType, int start, int count) throws RequestSceServerException {
 		if (msgType == null) {
 			String errorMsg = "The parameter 'msgType' is NULL!";
-			throw new RequestSceServerException(1, new Throwable(errorMsg));
+			throw new RequestSceServerException(1, errorMsg);
 		}
 		if (start < 0) {
 			String errorMsg = "The parameter 'start' (" + start + ")  is NEGATIVE integer!";
-			throw new RequestSceServerException(1, new Throwable(errorMsg));
+			throw new RequestSceServerException(1, errorMsg);
 		}
 		if (count <= 0) {
 			String errorMsg =  "The parameter 'count' (" + count + ") is NOT positive integer!";
-			throw new RequestSceServerException(1, new Throwable(errorMsg));
+			throw new RequestSceServerException(1, errorMsg);
 		}
 		return getService().getList(msgType, start, count);
 	}
@@ -62,11 +62,11 @@ public class SystemMsgSceServiceAdapter extends BaseAdapter implements SystemMsg
 	public SystemMsg getOne(long id, MsgTypeEnum msgType) throws RequestSceServerException {
 		if (msgType == null) {
 			String errorMsg = "The parameter 'msgType' is NULL!";
-			throw new RequestSceServerException(1, new Throwable(errorMsg));
+			throw new RequestSceServerException(1, errorMsg);
 		}
 		if (id <= 0) {
 			String errorMsg = "The parameter 'id ''" + id + "' is NOT positive integer!";
-			throw new RequestSceServerException(1, new Throwable(errorMsg));
+			throw new RequestSceServerException(1, errorMsg);
 		}
 		return getService().getOne(id, msgType);
 	}
@@ -75,7 +75,7 @@ public class SystemMsgSceServiceAdapter extends BaseAdapter implements SystemMsg
 	public boolean update(SystemMsg systemMsg) throws RequestSceServerException {
 		if (systemMsg == null) {
 			String errorMsg = "The parameter 'systemMsg' is NULL!";
-			throw new RequestSceServerException(1, new Throwable(errorMsg));
+			throw new RequestSceServerException(1, errorMsg);
 		}
 		return getService().update(systemMsg);
 	}
