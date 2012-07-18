@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>suc-root-pom</artifactId>
+    <groupId>com.sohu.suc</groupId>
+    <version>2.0-SNAPSHOT</version>
+  </parent>  
+  
+  <groupId>com.sohu.suc.request</groupId>
+  <artifactId>sce-request-service-adapter</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <description>request service interfaces</description>
+  <developers>
+	  <developer>
+	    <name>Hao Lin</name>
+	    <email>linhao@sohu-inc.com</email>
+	  </developer>
+  </developers>
+
+  <dependencies>
+  	<dependency>
+      <groupId>com.sohu.suc.adventure</groupId>
+      <artifactId>suc-adventure-core</artifactId>
+  	</dependency>
+	<dependency>
+      <groupId>com.sohu.suc</groupId>
+      <artifactId>sce-service-adapter</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+	</dependency>
+  </dependencies>
+
+</project>

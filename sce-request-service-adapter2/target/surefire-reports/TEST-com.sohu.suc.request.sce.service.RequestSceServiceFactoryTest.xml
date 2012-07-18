@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="0.195" errors="2" skipped="0" tests="2" name="com.sohu.suc.request.sce.service.RequestSceServiceFactoryTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="D:\bin\Java\jdk1.6.0_31\jre\bin"/>
+    <property name="java.vm.version" value="20.6-b01"/>
+    <property name="java.vm.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.vendor.url" value="http://java.sun.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\workspace-git\sce-request-service-adapter2"/>
+    <property name="java.runtime.version" value="1.6.0_31-b05"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="basedir" value="D:\workspace-git\sce-request-service-adapter2"/>
+    <property name="java.endorsed.dirs" value="D:\bin\Java\jdk1.6.0_31\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="surefire.real.class.path" value="D:\workspace-git\sce-request-service-adapter2\target\surefire\surefirebooter7313667473445808156.jar"/>
+    <property name="java.io.tmpdir" value="C:\Users\Bob\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="sun.jnu.encoding" value="GB18030"/>
+    <property name="java.library.path" value="D:\bin\Java\jdk1.6.0_31\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Dell\DW WLAN Card;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;c:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;c:\Program Files (x86)\Common Files\Roxio Shared\OEM\DLLShared\;c:\Program Files (x86)\Common Files\Roxio Shared\OEM\DLLShared\;c:\Program Files (x86)\Common Files\Roxio Shared\OEM\12.0\DLLShared\;c:\Program Files (x86)\Roxio\OEM\AudioCore\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\Windows Live\Shared;D:\bin\maven-2.2.1\bin;D:\Program Files\TortoiseSVN\bin;F:\优化大师\Windows7Master;%CA;ALINA_HOME%\lib;D:\bin\apache-tomcat-6.0.35\lib\servlet-api.jar;D:\bin\apache-tomcat-6.0.35\lib\jsp-api.jar;D:\bin\Java\jdk1.6.0_31\bin; ;."/>
+    <property name="surefire.test.class.path" value="D:\workspace-git\sce-request-service-adapter2\target\test-classes;D:\workspace-git\sce-request-service-adapter2\target\classes;C:\Users\Bob\.m2\repository\com\sohu\suc\adventure\suc-adventure-core\1.0-SNAPSHOT\suc-adventure-core-1.0-SNAPSHOT.jar;C:\Users\Bob\.m2\repository\com\sohu\suc\suc-core\2.0-SNAPSHOT\suc-core-2.0-SNAPSHOT.jar;C:\Users\Bob\.m2\repository\org\apache\zookeeper\zookeeper\3.3.5\zookeeper-3.3.5.jar;C:\Users\Bob\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\Bob\.m2\repository\com\sohu\suc\suc-utils\2.0-SNAPSHOT\suc-utils-2.0-SNAPSHOT.jar;C:\Users\Bob\.m2\repository\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar;C:\Users\Bob\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\Bob\.m2\repository\commons-codec\commons-codec\1.2\commons-codec-1.2.jar;C:\Users\Bob\.m2\repository\net\sourceforge\nekohtml\nekohtml\1.9.11\nekohtml-1.9.11.jar;C:\Users\Bob\.m2\repository\xerces\xercesImpl\2.8.1\xercesImpl-2.8.1.jar;C:\Users\Bob\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Bob\.m2\repository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Users\Bob\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\Bob\.m2\repository\commons-configuration\commons-configuration\1.7\commons-configuration-1.7.jar;C:\Users\Bob\.m2\repository\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;C:\Users\Bob\.m2\repository\commons-digester\commons-digester\1.8\commons-digester-1.8.jar;C:\Users\Bob\.m2\repository\commons-beanutils\commons-beanutils\1.8.3\commons-beanutils-1.8.3.jar;C:\Users\Bob\.m2\repository\org\codehaus\jackson\jackson-mapper-asl\1.8.5\jackson-mapper-asl-1.8.5.jar;C:\Users\Bob\.m2\repository\org\codehaus\jackson\jackson-core-asl\1.8.5\jackson-core-asl-1.8.5.jar;C:\Users\Bob\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\Bob\.m2\repository\com\sohu\suc\sce-service-adapter\2.0-SNAPSHOT\sce-service-adapter-2.0-SNAPSHOT.jar;C:\Users\Bob\.m2\repository\com\sohu\suc\sce-slice\2.0-SNAPSHOT\sce-slice-2.0-SNAPSHOT.jar;C:\Users\Bob\.m2\repository\com\sohu\suc\sce-proto\2.0-SNAPSHOT\sce-proto-2.0-SNAPSHOT.jar;C:\Users\Bob\.m2\repository\com\google\protobuf\protobuf-java\2.4.1\protobuf-java-2.4.1.jar;C:\Users\Bob\.m2\repository\com\zeroc\ice\3.4.2\ice-3.4.2.jar;C:\Users\Bob\.m2\repository\junit\junit\4.8.2\junit-4.8.2.jar;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\Bob"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="file.encoding" value="GB18030"/>
+    <property name="user.name" value="Bob"/>
+    <property name="java.class.path" value="D:\workspace-git\sce-request-service-adapter2\target\test-classes;D:\workspace-git\sce-request-service-adapter2\target\classes;C:\Users\Bob\.m2\repository\com\sohu\suc\adventure\suc-adventure-core\1.0-SNAPSHOT\suc-adventure-core-1.0-SNAPSHOT.jar;C:\Users\Bob\.m2\repository\com\sohu\suc\suc-core\2.0-SNAPSHOT\suc-core-2.0-SNAPSHOT.jar;C:\Users\Bob\.m2\repository\org\apache\zookeeper\zookeeper\3.3.5\zookeeper-3.3.5.jar;C:\Users\Bob\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\Bob\.m2\repository\com\sohu\suc\suc-utils\2.0-SNAPSHOT\suc-utils-2.0-SNAPSHOT.jar;C:\Users\Bob\.m2\repository\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar;C:\Users\Bob\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\Bob\.m2\repository\commons-codec\commons-codec\1.2\commons-codec-1.2.jar;C:\Users\Bob\.m2\repository\net\sourceforge\nekohtml\nekohtml\1.9.11\nekohtml-1.9.11.jar;C:\Users\Bob\.m2\repository\xerces\xercesImpl\2.8.1\xercesImpl-2.8.1.jar;C:\Users\Bob\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Bob\.m2\repository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Users\Bob\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\Bob\.m2\repository\commons-configuration\commons-configuration\1.7\commons-configuration-1.7.jar;C:\Users\Bob\.m2\repository\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;C:\Users\Bob\.m2\repository\commons-digester\commons-digester\1.8\commons-digester-1.8.jar;C:\Users\Bob\.m2\repository\commons-beanutils\commons-beanutils\1.8.3\commons-beanutils-1.8.3.jar;C:\Users\Bob\.m2\repository\org\codehaus\jackson\jackson-mapper-asl\1.8.5\jackson-mapper-asl-1.8.5.jar;C:\Users\Bob\.m2\repository\org\codehaus\jackson\jackson-core-asl\1.8.5\jackson-core-asl-1.8.5.jar;C:\Users\Bob\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\Bob\.m2\repository\com\sohu\suc\sce-service-adapter\2.0-SNAPSHOT\sce-service-adapter-2.0-SNAPSHOT.jar;C:\Users\Bob\.m2\repository\com\sohu\suc\sce-slice\2.0-SNAPSHOT\sce-slice-2.0-SNAPSHOT.jar;C:\Users\Bob\.m2\repository\com\sohu\suc\sce-proto\2.0-SNAPSHOT\sce-proto-2.0-SNAPSHOT.jar;C:\Users\Bob\.m2\repository\com\google\protobuf\protobuf-java\2.4.1\protobuf-java-2.4.1.jar;C:\Users\Bob\.m2\repository\com\zeroc\ice\3.4.2\ice-3.4.2.jar;C:\Users\Bob\.m2\repository\junit\junit\4.8.2\junit-4.8.2.jar;"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="D:\bin\Java\jdk1.6.0_31\jre"/>
+    <property name="sun.java.command" value="D:\workspace-git\sce-request-service-adapter2\target\surefire\surefirebooter7313667473445808156.jar D:\workspace-git\sce-request-service-adapter2\target\surefire\surefire8264357125302453435tmp D:\workspace-git\sce-request-service-adapter2\target\surefire\surefire2103520654694581952tmp"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.6.0_31"/>
+    <property name="java.ext.dirs" value="D:\bin\Java\jdk1.6.0_31\jre\lib\ext;C:\windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="D:\bin\Java\jdk1.6.0_31\jre\lib\resources.jar;D:\bin\Java\jdk1.6.0_31\jre\lib\rt.jar;D:\bin\Java\jdk1.6.0_31\jre\lib\sunrsasign.jar;D:\bin\Java\jdk1.6.0_31\jre\lib\jsse.jar;D:\bin\Java\jdk1.6.0_31\jre\lib\jce.jar;D:\bin\Java\jdk1.6.0_31\jre\lib\charsets.jar;D:\bin\Java\jdk1.6.0_31\jre\lib\modules\jdk.boot.jar;D:\bin\Java\jdk1.6.0_31\jre\classes"/>
+    <property name="java.vendor" value="Sun Microsystems Inc."/>
+    <property name="localRepository" value="C:\Users\Bob\.m2\repository"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase time="0.108" classname="com.sohu.suc.request.sce.service.RequestSceServiceFactoryTest" name="testGetNormalMsgSceService">
+    <error message="Unresolved compilation problem: 
+	The constructor RequestSceServerException(int, String) is undefined
+" type="java.lang.Error">java.lang.Error: Unresolved compilation problem: 
+	The constructor RequestSceServerException(int, String) is undefined
+
+	at com.sohu.suc.request.sce.adapter.NormalMsgSceServiceAdapter.createInform(NormalMsgSceServiceAdapter.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.sohu.suc.sce.adapter.BlockCutterInvocationHandler.invoke(BlockCutterInvocationHandler.java:38)
+	at $Proxy9.createInform(Unknown Source)
+	at com.sohu.suc.request.sce.service.RequestSceServiceFactoryTest.testGetNormalMsgSceService(RequestSceServiceFactoryTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runNotIgnored(BlockJUnit4ClassRunner.java:79)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:71)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:146)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at $Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+</error>
+    <system-out>@HL
+@HL-------------------------------------------------------
+@HL T E S T S
+@HL-------------------------------------------------------
+@SLRunning com.sohu.suc.request.sce.service.RequestSceServiceFactoryTest
+</system-out>
+  </testcase>
+  <testcase time="0.013" classname="com.sohu.suc.request.sce.service.RequestSceServiceFactoryTest" name="testGetSystemMsgSceService">
+    <error message="Unresolved compilation problems: 
+	The constructor RequestSceServerException(int, String) is undefined
+	The constructor RequestSceServerException(int, String) is undefined
+" type="java.lang.Error">java.lang.Error: Unresolved compilation problems: 
+	The constructor RequestSceServerException(int, String) is undefined
+	The constructor RequestSceServerException(int, String) is undefined
+
+	at com.sohu.suc.request.sce.adapter.SystemMsgSceServiceAdapter.delete(SystemMsgSceServiceAdapter.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.sohu.suc.sce.adapter.BlockCutterInvocationHandler.invoke(BlockCutterInvocationHandler.java:38)
+	at $Proxy10.delete(Unknown Source)
+	at com.sohu.suc.request.sce.service.RequestSceServiceFactoryTest.testGetSystemMsgSceService(RequestSceServiceFactoryTest.java:137)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runNotIgnored(BlockJUnit4ClassRunner.java:79)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:71)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:146)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at $Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+</error>
+  </testcase>
+</testsuite>
