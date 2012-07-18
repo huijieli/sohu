@@ -9,6 +9,7 @@ package com.sohu.suc.request.sce.adapter;
  */
 public final class AdapterConstants {
 	
+	
 	/**
 	 * 属性文件代理类
 	 */
